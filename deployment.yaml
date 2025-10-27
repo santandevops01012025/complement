@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: todo-ui
+  name: complement-ui
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: todo-ui
+      app: complement-ui
   template:
     metadata:
       labels:
-        app: todo-ui
+        app: complement-ui
     spec:
       containers:
-      - name: todo-ui
-        image: santandevops01012025/todofe:v2
+      - name: complement-ui
+        image: santandevops01012025/santankiimage:v1
         ports:
         - containerPort: 80

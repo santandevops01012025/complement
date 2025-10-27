@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: todo-ui-ingress
+  name: complement-ui-ingress
 spec:
   ingressClassName: nginx
   rules:
-  - host: ui.jhandu.shop
+  - host: ui.santansre.shop
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: todo-ui
+            name: complement-ui
             port: 
               number: 80
