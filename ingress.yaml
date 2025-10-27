@@ -21,7 +21,7 @@ kind: Ingress
 metadata:
   name: complement-ui-ingress
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
   tls:
@@ -32,8 +32,8 @@ spec:
   - host: ui.santansre.shop
     http:
       paths:
-      - pathType: Prefix
-        path: "/"
+      - path: /
+        pathType: Prefix
         backend:
           service:
             name: complement-ui
